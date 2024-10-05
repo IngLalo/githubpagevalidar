@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <script>
+            function validarNumeroControl() {
+                const numeroControl = document.getElementById("numeroControl").value;
+                const regex = /^(20|21|22|23|24)84\d{4}$/;
+
+                if (regex.test(numeroControl)) {
+                    alert("Número de control válido.");
+                } else {
+                    alert("Número de control inválido.");
+                }
+            }
+        </script>
+        </head>
+        <br>
+        <h1 style="text-align: center; color:darkred; font-family: sans-serif;">Validar Número de Control</h1>
+        <br>
+        </br>
+        <form onsubmit="event.preventDefault(); validarNumeroControl();">
+            <label for="numeroControl">Número de Control:</label>
+            <input type="text" id="numeroControl" maxlength="8" required>
+            <br>
+            </br>
+            <button type="submit">Validar</button>
+        </form>
+    </div>
+</body>
+
+</html>
